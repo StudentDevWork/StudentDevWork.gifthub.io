@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front End</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding: 30px;
+            background-color: rgb(5, 5, 5);
+        }
+
+        .home-color {
+            background: radial-gradient(rgb(2, 2, 37), rgb(0, 0, 18));
+            border-radius: 20px;
+            color: white;
+            background-color: rgba(50, 45, 75, 0.5);
+            padding: 8px 18px;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            width: fit-content;
+        }
+
+        .title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            font-weight: 800;
+            line-height: 1.14em;
+            letter-spacing: -0.02em;
+            color: white;
+        }
+
+        .gradient {
+            background: radial-gradient(rgb(29, 201, 228), rgb(4, 60, 78));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: rgb(117, 117, 158);
+            text-align: left;
+            margin-top: -10px;
+            margin-bottom: 80px;
+        }
+
+        .btn-box-grid {
+            width: fit-content;
+            display: inline-flex;
+        }
+
+        .vp-btn {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+            background-color: rgb(9, 173, 192);
+            color: rgba(0, 0, 0, 0.788);
+            border-radius: 15px;
+            padding: 5px 18px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            margin-left: 25px;
+        }
+
+        .vp-btn:hover {
+            background-color: rgb(183, 183, 226);
+        }
+
+        .discuss {
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-left: 15px;
+            border-radius: 25px;
+            padding: 8px 18px;
+            border: 1px solid rgb(51, 51, 97);
+            text-decoration: none;
+            color: rgb(228, 228, 235);
+            transition: all 0.3s ease;
+            width: fit-content;
+
+        }
+
+        .discuss:hover {
+            color: white;
+            border: 1px solid rgb(120, 120, 176);
+        }
+
+        .about-dis {
+            display: flex;
+            margin-top: 80px;
+        }
+
+        .about-glass {
+            width: fit-content;
+            background-color: #161622;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            flex-direction: column;
+            margin: 25px;
+            padding: 5px 15px;
+        }
+
+        .glassy {
+            background-color: rgb(13, 13, 24);
+            transition: all 0.2s ease;
+            border: 1px solid rgb(64, 62, 86);
+            border-radius: 15px;
+            padding: 10px 15px;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            display: inline-flex;
+            gap: 10px;
+            margin-top: 60px;
+            margin-left: 5px;
+            margin-right: 10px;
+            width: 180px;
+            height: 60px;
+            margin-bottom: 0px;
+            align-items: center;
+        }
+
+        .capablity-iconbox {
+            display: flex;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(20, 20, 34);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            width: fit-content;
+            color: white;
+            transition: scale 0.5s ease;
+        }
+
+        .glassy:hover {
+            background-color: rgb(13, 13, 25);
+            border-color: rgb(120, 161, 197);
+        }
+
+        .glassy:hover .capablity-iconbox {
+            transform: scale(1.3);
+        }
+
+        .glassy-info {
+            display: flex;
+            gap: 2px;
+            flex-direction: column;
+            font-weight: 800;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+
+        .glassy-title {
+            color: white;
+            font-size: 12px;
+        }
+
+        .glassy-script {
+            color: rgb(170, 170, 229);
+            font-size: 0.8rem;
+        }
+
+        .promotion {
+            color: rgb(130, 132, 134);
+            font-weight: 600;
+            font-size: large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: -15px;
+        }
+
+        .P-title {
+            font-size: 40px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+
+        .cap {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(3, 3, 31);
+            border-radius: 15px;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            display: inline-flex;
+            flex-direction: column;
+            padding: 8px 18px;
+            margin-top: 100px;
+        }
+
+        .cap-title {
+            color: rgb(134, 192, 223);
+            font-weight: 900;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .cap-heading {
+            color: white;
+            font-weight: 800;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 1px;
+            margin-bottom: 20px;
+        }
+
+        .cap--box-grid {
+            width: fit-content;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .glassy-2 {
+            background-color: rgb(9, 9, 19);
+            border-radius: 15px;
+            padding: 8px 18px;
+            font-weight: 900;
+            width: 25%;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            display: inline-flex;
+            flex-direction: column;
+            height: 340px;
+            text-align: left;
+            margin-left: 6px;
+            margin-right: 5px;
+            margin-top: 40px;
+            border: 1px solid rgb(7, 127, 138);
+        }
+
+        .glass {
+            background-color: rgb(13, 13, 23);
+            border-radius: 9px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            color: rgb(92, 226, 238);
+            padding: 8px 18px;
+            font-weight: 900;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            display: inline-flex;
+            flex-direction: column;
+            text-align: left;
+            border: 1px solid rgb(7, 127, 138);
+            margin-top: 15px;
+            margin-bottom: 20px;
+            width: fit-content;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(18, 26, 31, 0.65);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 6px 19px;
+            top: 5px;
+            position: sticky;
+            z-index: 100;
+        }
+
+        .nav-left {
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: monospace;
+        }
+
+        .nav-logo {
+            height: 25px;
+            width: 25px;
+            background: linear-gradient(135deg, rgb(100, 229, 115), rgb(2, 66, 104));
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-weight: 900;
+            font-size: 20px;
+            color: rgb(207, 249, 252);
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-text {
+            display: flex;
+            flex-direction: column;
+            font-weight: 1000;
+        }
+
+        .nav-title {
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-dis {
+            color: rgb(170, 198, 229);
+            font-size: 15px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            transition: all 0.5s ease;
+            scroll-behavior: smooth;
+            display: inline-block;
+        }
+
+        .nav-links a:hover {
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+
+        .hire-btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #00a2ff;
+            color: #031326;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 8px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0, 162, 255, 0.45);
+            transition: all 0.2s ease;
+        }
+
+        .hire-btn:hover {
+            background-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(56, 189, 248, 0.65);
+        }
+
+        .hire {
+            background: linear-gradient(rgb(17, 17, 44), rgb(9, 9, 31));
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 55px 25px;
+            font-size: 14px;
+            text-align: left;
+            color: rgb(191, 204, 247);
+            display: inline-flex;
+            width: fit-content;
+            border-radius: 15px;
+            Margin: 10px;
+            margin-top: 100px;
+            margin-right: 25px;
+        }
+
+        .hire-title {
+            color: rgb(8, 212, 252);
+            font-family: monospace;
+            font-weight: 1000;
+            margin: 1px;
+        }
+
+        .hire-heading {
+            font-size: 27px;
+            color: white;
+            font-weight: 900;
+            margin: 1px;
+        }
+
+        .hire-link-box {
+            color: white;
+            background-color: rgb(12, 12, 28);
+            border-radius: 15px;
+            border: 0.2px solid rgb(21, 45, 72);
+            padding: 10px 12px;
+            font-size: 12px;
+        }
+
+        form {
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+            font-family: sens-serif;
+            padding: 20px 25px;
+            text-align: left;
+            width: 90%;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-left: 25px;
+            margin-top: -10px;
+        }
+
+        input[type=text],
+        input[type=email],
+        select,
+        textarea {
+            color: white;
+            background-color: rgb(1, 1, 32);
+            border-radius: 15px;
+            border: 0.2px solid rgb(21, 45, 72);
+            padding: 10px 12px;
+            font-size: 12px;
+            margin-bottom: 16px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        select:focus,
+        textarea:focus {
+            border: 1px solid rgb(85, 85, 92);
+        }
+
+        input[type=text]:hover,
+        input[type=email]:hover,
+        select:hover,
+        textarea:hover {
+            border: 1px solid rgb(85, 85, 92);
+        }
+
+        .submit {
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            padding: 9px;
+            cursor: pointer;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            font-weight: 600;
+            transition: color 0.5s ease;
+        }
+
+        .submit:hover {
+            background: linear-gradient(135deg, #359fd4, #3766cb);
+        }
+
+        .logo {
+            padding: 5px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6px;
+            height: 7px;
+            color: #000000;
+            font-size: 20px;
+            background-color: #303052;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .bottom {
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-top: 1px solid rgb(48, 48, 72);
+            color: #94a3b8;
+            padding: 24px 32px;
+        }
+
+        .left-side {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .hire-me {
+            flex-direction: column;
+            display: flex;
+        }
+
+        .project-background {
+            width: fit-content;
+            background: linear-gradient(rgb(5, 1, 28), rgb(0, 17, 17));
+            padding: 35px 35px;
+            margin-top: 100px;
+            flex-direction: column;
+            text-align: left;
+            border-radius: 21px;
+        }
+
+        .project-title {
+            font-family: monospace;
+            font-weight: 800;
+            color: rgb(68, 131, 215);
+            font-size: 20px;
+        }
+
+        .project-heading {
+            font-weight: 800;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 26px;
+        }
+
+        .project-dis {
+            font-size: 15px;
+            color: #8ab4ee;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 5px;
+        }
+
+        .project {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .card-box {
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            margin-top: 30px;
+            cursor: pointer;
+            min-width: 0;
+            flex: 1;
+            transition: all 0.2s ease;
+        }
+
+        .card-box:hover {
+            transform: scale(1.02);
+        }
+
+        .card1,
+        .card3,
+        .card5 {
+            background: linear-gradient(90deg, rgb(2, 44, 69), rgb(11, 77, 89));
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 14px;
+            height: 110px;
+        }
+
+        .card2,
+        .card4,
+        .card6 {
+            background: radial-gradient(rgb(2, 52, 56), rgb(0, 0, 0));
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .card3 {
+            background: linear-gradient(90deg, rgb(6, 56, 85), #23206f);
+        }
+
+        .card4 {
+            background: linear-gradient(rgb(2, 2, 73), rgb(1, 1, 27));
+        }
+
+        .card5 {
+            background: linear-gradient(90deg, rgb(2, 44, 69), rgb(24, 71, 136));
+        }
+
+        .card6 {
+            background: linear-gradient(rgb(2, 2, 73), rgb(1, 1, 27));
+        }
+
+        .card-head {
+            color: #a5a5e7;
+            font-family: monospace;
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        .card-tit {
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+
+        .card-dis {
+            font-size: 14px;
+            color: rgb(189, 189, 225);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .card-glass,
+        .card2-glass {
+            background-color: rgb(21, 64, 89);
+            border-radius: 5px;
+            width: fit-content;
+            -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+            color: #a4acc5;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 15px;
+            font-family: monospace;
+
+        }
+
+        .card2-glass {
+            background-color: rgb(11, 21, 65);
+        }
+
+        .card2-glass-grid,
+        .card4-glass-grid,
+        .card6-glass-grid {
+            display: inline-flex;
+            gap: 5px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card6-glass-grid {
+            margin-top: 2px;
+        }
+
+        .card-btn {
+            color: rgb(55, 117, 164);
+            background-color: rgb(21, 21, 57);
+            border: 1px solid rgb(24, 24, 56);
+            border-radius: 8px;
+            width: 100%;
+            height: 33px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            align-items: center;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 0;
+        }
+
+        .card-box:hover .card2 .card-btn {
+            background-color: rgb(34, 34, 75);
+        }
+
+        .card-box:hover .card4 .card-btn {
+            background-color: rgb(34, 34, 75);
+        }
+
+        .card-box:hover .card6 .card-btn {
+            background-color: rgb(34, 34, 75);
+        }
+
+        .preview-bg {
+            background-color: rgba(a139, 146, 225, 0.75);
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            position: fixed;
+            inset: 0;
+            transition: visibility 0.5s ease, opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .preview-bg.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .pre-box {
+            padding: 35px;
+            background-color: rgb(20, 20, 50);
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 350px;
+            gap: 10px;
+            height: auto;
+            min-height: 280px;
+            max-width: 90%;
+            margin-left: 0;
+            margin: auto;
+            overflow-y: auto;
+        }
+
+        .pre-title-box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pre-title {
+            color: rgb(132, 132, 234);
+            font-family: monospace;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .X-btn {
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: white;
+            transition: color 0.6s ease;
+            background: transparent;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+
+        .X-btn:hover {
+            background-color: rgb(64, 64, 90);
+        }
+
+        .pre-heading {
+            font-size: 25px;
+            color: white;
+            margin-top: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .pre-dis {
+            color: rgb(211, 211, 243);
+            font-size: 15px;
+            font-family: sens-serif;
+            margin-top: -30px;
+        }
+
+        .ul-box {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            margin-top: -15px;
+        }
+
+        .ul-heading {
+            font-size: 15px;
+            color: white;
+            margin-top: -10px;
+        }
+
+        .list-box {
+            margin-top: -20px;
+            margin-left: -20px;
+            line-height: 20px;
+        }
+
+        li {
+            font-size: 13px;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .msg-bg {
+            background-color: rgb(3, 10, 23);
+            border: 1px solid rgba(69, 230, 248, 0.487);
+            padding: 10px 18px;
+            border-radius: 15px;
+            width: 250px;
+            height: 40px;
+            position: fixed;
+            bottom: 80px;
+            right: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translatey(20px);
+            z-index: 9;
+            transition: all 0.5s ease;
+        }
+
+        .msg-bg.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translatey(0);
+        }
+
+        .msg-tit {
+            text-align: left;
+            color: rgb(93, 157, 225);
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .msg {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        .serve-bg {
+            background: linear-gradient(rgb(1, 1, 29), rgb(0, 0, 17));
+            padding: 15px 25px;
+            border-radius: 25px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .sr-tit {
+            color: rgb(117, 172, 239);
+            font-family: monospace;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+
+        .serve-head {
+            color: white;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 0%;
+
+        }
+
+        .serve-dis {
+            color: rgb(189, 180, 237);
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            margin-top: 0%;
+        }
+
+        .card-grid {
+            width: fit-content;
+            display: inline-flex;
+            margin-top: 10px;
+            gap: 20px;
+        }
+
+        .serve1 {
+            background-color: rgb(0, 2, 4);
+            border: 1px solid rgb(7, 127, 138);
+            border-radius: 14px;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+        }
+
+        .serve1-tit {
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+            font-family: sens-serif;
+        }
+
+        .serve-dif {
+            color: rgb(135, 135, 139);
+            font-size: 17px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .turnaround {
+            color: white;
+            padding: 8px;
+            border: 1px solid rgb(7, 127, 138);
+            border-radius: 10px;
+            font-size: 13px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(7, 7, 17);
+            width: fit-content;
+            margin-top: auto;
+            align-self: center;
+            margin-bottom: 0;
+            ;
+        }
+
+        .serve-clr {
+            color: rgb(135, 211, 236);
+        }
+
+        @media (max-width: 768px) {
+            .right-side {
+                width: 600px;
+                text-align: center;
+                margin-left: 200px;
+            }
+
+            .left-side {
+                width: 600px;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                margin-left: 290px;
+            }
+
+            .bottom {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            form {
+                width: 100R;
+                margin-top: 60px;
+                margin-left: 0;
+            }
+
+            .hire-me-left {
+                width: 100%;
+            }
+
+            .hire {
+                width: 600px;
+                flex-direction: column;
+            }
+
+            .card-grid {
+                flex-direction: column;
+            }
+
+            .serve1 {
+                width: 100%;
+            }
+
+            .serve-bg {
+                width: 600px;
+            }
+
+            .home-color {
+                width: 600px;
+            }
+
+            .vp-btn,
+            .discuss {
+                font-size: 13px;
+            }
+
+            .btn-box-grid {
+                width: 600px;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .about-dis {
+                flex-direction: column;
+                margin-top: auto;
+            }
+
+            .about-glass {
+                width: 600px;
+                margin-left: 0;
+            }
+
+            .cap {
+                width: 600px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .cap--box-grid {
+                width: 600px;
+            }
+
+            .project-background {
+                width: 600px;
+                display: flex;
+                text-align: center;
+            }
+
+            .project {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .card-box {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home"></div>
+    <div class="navbar" id="">
+        <a href="#home" class="nav-left">
+            <div class="nav-logo">&lt;/&gt;</div>
+            <div class="nav-text">
+                <div class="nav-title">Dev.Student</div>
+                <div class="nav-dis">Freelance Ready</div>
+            </div>
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Service">Service</a></li>
+            </ul>
+            <a href="#hire" class="hire-btn">Hire Me</a>
+        </div>
+    </div>
+
+    <div class="home-color" id="about">
+        <p class="heading"> Available for Part-time & Micro Freelance Projects</p>
+        <h1 class="title">
+            Hi i,m a <span class="gradient"> Front End Web Developer & </span>
+            Technical Writer.
+        </h1>
+        <p class="about">I craft clean, semantic, and mobile-first web pages that load quickly and look professional. As
+            a
+            student developer, I help creators and small businesses build landing pages, fix responsive layout bugs, and
+            produce structured technical guides</p>
+    </div>
+
+    <div class="btn-box-grid">
+        <a href="#project" class="vp-btn">View Project ⬇</a>
+        <a href="#discuss" class="discuss">↗ Let's Discuss Project</a><br>
+    </div>
+
+    <div class="about-dis">
+        <div class="about-glass">
+            <span class="P-title"> 100% </span> <br>
+            <span class="promotion"> Mobile-First & Semantic Code </span>
+        </div>
+        <div class="about-glass">
+            <span class="P-title"> 24h </span> <br>
+            <span class="promotion"> Prompt Response Time </span>
+        </div>
+        <div class="about-glass">
+            <span class="P-title"> Pocket-friendly </span> <br>
+            <span class="promotion"> Student Freelancer Rates </span>
+        </div>
+    </div>
+    <div class="cap" id="Skills">
+        <span class="cap-title">CAPABILITY</span>
+        <p class="cap-heading">My Core Skills & Tech Stack </p>
+        <p class="promotion" style="text-align: center; font-size: 20px;">Tools & Fundamentals i use daily to build
+            clean digital experiences</p>
+        <div>
+            <div class="cap--box-grid">
+                <div class="glassy">
+                    <div class="capablity-iconbox">▤</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> HTML5 </div>
+                        <span class="glassy-script"> Semantic & Accessible </span>
+                    </div>
+                </div>
+                <div class="glassy">
+                    <div class="capablity-iconbox">&lt;/&gt;</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> CSS3 / Tailwind</div>
+                        <span class="glassy-script">Flexbox, Grid & Utility</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cap--box-grid">
+                <div class="glassy">
+                    <div class="capablity-iconbox">📱</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> Responsive UI</div>
+                        <span class="glassy-script">Mobile, Tablet, Desktop</span>
+                    </div>
+                </div>
+                <div class="glassy">
+                    <div class="capablity-iconbox">👨🏼‍💻</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> JavaScript</div>
+                        <span class="glassy-script">DOM & Interactivity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cap--box-grid">
+                <div class="glassy">
+                    <div class="capablity-iconbox">⚙️</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> Technical Writing</div>
+                        <span class="glassy-script">Tutorials & Summaries</span>
+                    </div>
+                </div>
+                <div class="glassy">
+                    <div class="capablity-iconbox">🍾</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> Git & GitHub</div>
+                        <span class="glassy-script">Version Control & Pages</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cap--box-grid">
+                <div class="glassy">
+                    <div class="capablity-iconbox">📜</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> Basic Scripting</div>
+                        <span class="glassy-script">Task Automation</span>
+                    </div>
+                </div>
+                <div class="glassy">
+                    <div class="capablity-iconbox">⌨️</div>
+                    <div class="glassy-info">
+                        <div class="glassy-title"> No-Code / CMS</div>
+                        <span class="glassy-script">WordPress Customization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-background" id="Project">
+        <div class="project-title">Proof of Work</div>
+        <div class="project-heading">Featured Projects & Samples</div>
+        <div class="project-dis">Demonstrating practical web design, code explanations, and solutions</div>
+        <div class="project">
+            <div class="card-box" id="prebtn1">
+                <div class="card1">
+                    <div class="card-glass">Web Development</div>
+                    <span class="card-head">Live Demo Template</span>
+                    <span class="card-tit">Micro Business Landing Page</span>
+                </div>
+                <div class="card2">
+                    <span class="card-dis">A high-converting, mobile-first single page built with semantic HTML5 and
+                        clean CSS. Features responsive hero layouts, price cards, and a lightweight lead form.</span>
+                    <div class="card2-glass-grid">
+                        <div class="card2-glass">HTML5</div>
+                        <div class="card2-glass">CSS Grid</div>
+                        <div class="card2-glass">Mobile-First</div>
+                    </div>
+                    <button class="card-btn">Inspect Project Details ↗</button>
+                </div>
+            </div>
+            <div class="card-box" id="prebtn2">
+                <div class="card3">
+                    <div class="card-glass">Tech Writing</div>
+                    <span class="card-head">600-Word Guide</span>
+                    <span class="card-tit">Mastering CSS Flexbox Alignment</span>
+                </div>
+                <div class="card4">
+                    <span class="card-dis">Step-by-step beginner guide breaking down justify-content, align-items, and
+                        auto-margins with clear visual diagrams and reproducible code snippets.</span>
+                    <div class="card2-glass-grid">
+                        <div class="card2-glass">Tutorial</div>
+                        <div class="card2-glass">Documentation</div>
+                        <div class="card2-glass">CSS3</div>
+                    </div>
+                    <button class="card-btn">Read simple excerpt ↗</button>
+                </div>
+            </div>
+            <div class="card-box" id="prebtn3">
+                <div class="card5">
+                    <div class="card-glass">Automation & Scripting</div>
+                    <span class="card-head">Productivity Script</span>
+                    <span class="card-tit">Study Task Notifier & Webhook</span>
+                </div>
+                <div class="card6">
+                    <span class="card-dis">A lightweight automated script hooked to Windows Task Scheduler that
+                        sends
+                        formatted reminders, schedule alerts, and logs study sessions to a private Discord
+                        channel..</span>
+                    <div class="card6-glass-grid">
+                        <div class="card2-glass">PowerShell</div>
+                        <div class="card2-glass">Webhooks</div>
+                        <div class="card2-glass">JSON</div>
+                    </div>
+                    <button class="card-btn">View Architecture ↗</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-bg" id="prebg1">
+        <div class="pre-box">
+            <div class="pre-title-box">
+                <div class="pre-title">Front-End Architecture</div>
+                <button class="X-btn" id="xbtn1" aria-label="Close-modal">&times;</button>
+            </div>
+            <h3 class="pre-heading">Micro Business Landing Page</h3>
+            <p class="pre-dis">Designed as a reusable, high-performance one-page template. Built purely with
+                semantic HTML5 elements (header, main, section, footer), responsive media queries, and accessible typography.
+                Scored 98+ on Google Lighthouse for performance and accessibility.</p>
+            <div class="ul-box">
+                <h4 class="ul-heading">Key Highlights:</h4>
+                <ul class="list-box">
+                    <li>Zero bloated dependencies</li>
+                    <li>Responsive viewport support across 320px–1920px</li>
+                    <li>Optimized fast loading speed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="preview-bg" id="prebg2">
+        <div class="pre-box">
+            <div class="pre-title-box">
+                <div class="pre-title">Technical Writing Sample</div>
+                <button class="X-btn" id="xbtn2" aria-label="Close-modal">&times;</button>
+            </div>
+            <h3 class="pre-heading">Mastering CSS Flexbox Alignment</h3>
+            <p class="pre-dis">An excerpt from a beginner-focused developer guide designed to demystify Flexbox main
+                vs. cross axis alignment..</p>
+            <div class="ul-box">
+                <h4 class="ul-heading">Key Highlights:</h4>
+                <ul class="list-box">
+                    <li>Includes runnable CodePen snippets</li>
+                    <li>Clear explanation of justify-content vs align-items</li>
+                    <li>Written with clear active voice and structured bullet lists</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="preview-bg" id="prebg3">
+        <div class="pre-box">
+            <div class="pre-title-box">
+                <div class="pre-title">Automation & Productivity</div>
+                <button class="X-btn" id="xbtn3" aria-label="Close-modal">&times;</button>
+            </div>
+            <h3 class="pre-heading">Study Task Notifier & Webhook</h3>
+            <p class="pre-dis">A practical utility that integrates Windows Task Scheduler with a custom PowerShell
+                script to fire scheduled study prompts into a private Discord channel.</p>
+            <div class="ul-box">
+                <h4 class="ul-heading">Key Highlights:</h4>
+                <ul class="list-box">
+                    <li>Uses native REST API webhook calls</li>
+                    <li>Error-handled JSON payload assembly</li>
+                    <li>Automates recurring task reminders without third-party subscriptions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="serve-bg" id="Service">
+        <span class="sr-tit" id="project">What I Can Do For You</span>
+        <h3 class="serve-head">Freelance Services </h3>
+        <span class="serve-dis">Focused micro-services designed for quick
+            turnaround times and clean results
+        </span>
+        <div class="card-grid">
+            <div class="serve1">
+                <div class="glass">▤</div>
+                <div class="serve1-tit"> 1-Page Landing Page </div> <br>
+                <span class="serve-dif"> Conversion-focused single page
+                    design for coaching, portfolios, micro-products, or events. Fully responsive on all mobile
+                    screens.
+                </span>
+                <div class="turnaround">
+                    <span class="serve-clr">Turnaround: 2-3 Days &nbsp;</span>Affordable Rates
+                </div>
+            </div>
+            <div class="serve1">
+                <div class="glass">↗</div>
+                <div class="serve1-tit"> CSS Fixes & Responsive Tweaks</div> <br>
+                <span class="serve-dif"> Does your website break on iPhones
+                    or tablets? I troubleshoot layout overflow, misaligned flex containers, navigation glitches, and
+                    fonts
+                </span>
+                <div class="turnaround">
+                    <span class="serve-clr">Turnaround: 24 Hours &nbsp;</span>Quick Fixes
+                </div>
+            </div>
+            <div class=" serve1">
+                <div class="glass">⇙</div>
+                <div class="serve1-tit"> Technical Blog Posts & Guides</div> <br>
+                <span class="serve-dif"> Clear, easy-to-read coding explanations, student study guides, or technical
+                    cheat sheets with vetted code examples and clean formatting.</span>
+                <div class=" turnaround">
+                    <span class="serve-clr">Turnaround: 1-2 Days &nbsp;</span>Per-Word or Fixed
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="hire">
+        <div class="hire" id="discuss">
+            <div class="hire-me-left">
+                <p class="hire-title">Start A Conversation</p>
+                <p class="hire-heading">Have a project in mind? <br> Let's get it done.
+                </p>
+                <p>Whether you need a quick landing page, bug troubleshooting on mobile, or clean technical
+                    articles, I am ready to help. Send a message, and I will reply within 24 hours.</p>
+                <p class="hire-link-box">® &nbsp; &nbsp; &nbsp; Available daily: 1–2 hours (Evening / IST timezone)
+                </p>
+                <p class="hire-link-box">📨 &nbsp; &nbsp; student.dev@example.com</p>
+            </div>
+            <form id="fsub">
+                <label for="name">YOUR NAME</label>
+                <input type="text" id="name" name="name" placeholder="eg:- Willem Douglas" required>
+
+                <label for="email">YOUR EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="eg:- student@gmail.com" required>
+
+                <label for="service">SERVICE NEEDED</label>
+                <select id="service" name="service" required>
+                    <option value="">Select One</option>
+                    <option value="Responsive Page">1-Page Responsive Landing Page</option>
+                    <option value="Bug fixing">CSS Mobile View Bug Fixing</option>
+                    <option value="Tutorial">Technical Writing & Tutorial</option>
+                    <option value="Other">Other Project</option>
+                </select>
+
+                <label for="details">PROJECT DETAILS</label>
+                <textarea id="details" name="details" rows="2" cols="15" minlength="20"
+                    placeholder="Briefly describe what you need done...."></textarea>
+
+                <!-- Fixed typo & set to submit -->
+                <button class="submit" type="submit">Send Message 📨</button>
+
+                <div class="msg-bg" id="msg">
+                    <span class="msg-tit">✔️ Massage Sent</span>
+                    <p class="msg">Thank you. I will get back to you shortly.</p>
+                </div>
+            </form>
+        </div>
+        <div class="bottom">
+            <div class="left-side">
+                <p class="logo">&lt;&gt;</p>
+                <p> Built with Semantic HTML & Tailwind CSS. Hosted on GitHub Pages</p>
+            </div>
+            <div class="right-side">
+                <p>©️ 2026 Student Front-End Developer. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const prebg = document.getElementById('prebg1');
+        const prebtn = document.getElementById("prebtn1");
+        const xbtn = document.getElementById('xbtn1');
+
+        prebtn.addEventListener('click', () => {
+            prebg.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const clspre = () => {
+            prebg.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        xbtn.addEventListener('click', clspre);
+
+        prebg.addEventListener('click', (e) => {
+            if (e.target === prebg) {
+                clspre();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && prebg.classList.contains('active')) {
+                clspre();
+            }
+        });
+
+        const prebg2 = document.getElementById('prebg2');
+        const prebtn2 = document.getElementById('prebtn2');
+        const xbtn2 = document.getElementById('xbtn2');
+
+        prebtn2.addEventListener('click', () => {
+            prebg2.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const clsbtn2 = () => {
+            prebg2.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        xbtn2.addEventListener('click', clsbtn2);
+
+        prebg2.addEventListener('click', (e) => {
+            if (e.target === prebg2) {
+                clsbtn2();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target === prebg2) {
+                clsbtn2();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && prebg2.classList.contains('active')) {
+                clsbtn2();
+            }
+        });
+
+        const prebtn3 = document.getElementById('prebtn3');
+        const prebg3 = document.getElementById('prebg3');
+        const xbtn3 = document.getElementById('xbtn3');
+
+        prebtn3.addEventListener('click', () => {
+            prebg3.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const clsbtn3 = () => {
+            prebg3.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        xbtn3.addEventListener('click', clsbtn3);
+
+        prebg3.addEventListener('click', (e) => {
+            if (e.target === prebg3) {
+                clsbtn3();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && prebg3.classList.contains('active')) {
+                clsbtn3();
+            }
+        });
+
+        const fsub = document.getElementById('fsub');
+        const msg = document.getElementById('msg');
+
+        fsub.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            msg.classList.add('show');
+            fsub.reset();
+
+            setTimeout(() => {
+                msg.classList.remove('show');
+            }, 4000);
+        });
+
+    </script>
+</body>
+
+</html>
