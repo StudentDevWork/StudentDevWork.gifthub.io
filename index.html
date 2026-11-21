@@ -1202,7 +1202,8 @@
             </div>
             <h3 class="pre-heading">Micro Business Landing Page</h3>
             <p class="pre-dis">Designed as a reusable, high-performance one-page template. Built purely with
-                semantic HTML5 elements (header, main, section, footer), responsive media queries, and accessible typography.
+                semantic HTML5 elements (header, main, section, footer), responsive media queries, and accessible
+                typography.
                 Scored 98+ on Google Lighthouse for performance and accessibility.</p>
             <div class="ul-box">
                 <h4 class="ul-heading">Key Highlights:</h4>
@@ -1308,7 +1309,10 @@
                 </p>
                 <p class="hire-link-box">📨 &nbsp; &nbsp; student.dev.work@gmail.com</p>
             </div>
-            <form id="fsub">
+            <form id="fsub" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="cf1b5dfe-a3b6-498a-bc7e-d9c7eeca3edf">
+                <input type="hidden" name="subject" value="New freelance project from Portfolio">
+
                 <label for="name">YOUR NAME</label>
                 <input type="text" id="name" name="name" placeholder="eg:- Willem Douglas" required>
 
@@ -1325,10 +1329,8 @@
                 </select>
 
                 <label for="details">PROJECT DETAILS</label>
-                <textarea id="details" name="details" rows="2" cols="15" minlength="20"
-                    placeholder="Briefly describe what you need done...."></textarea>
+                <textarea id="details" name="details" rows="2" cols="15" minlength="20" placeholder="Briefly describe what you need done...." required></textarea>
 
-                <!-- Fixed typo & set to submit -->
                 <button class="submit" type="submit">Send Message 📨</button>
 
                 <div class="msg-bg" id="msg">
@@ -1442,15 +1444,40 @@
         const fsub = document.getElementById('fsub');
         const msg = document.getElementById('msg');
 
-        fsub.addEventListener('submit', (e) => {
+        fsub.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            msg.classList.add('show');
-            fsub.reset();
+            const sbtn = fsub.querySelector('.submit');
+            const rtext = sbtn.textContent;
+            sbtn.textContent = 'Sending...';
+            sbtn.disabled = true;
 
-            setTimeout(() => {
-                msg.classList.remove('show');
-            }, 4000);
+            const formData = new FormData(fsub);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    msg.classList.add('show');
+                    fsub.reset();
+
+                    setTimeout(() => {
+                        msg.classList.remove('show');
+                    }, 4000);
+                } else {
+                    alert('Something Went Wrong!' + result.message);
+                }
+            } catch (error) {
+                alert('Network Error! Check Your connection');
+            } finally {
+                sbtn.textContent = rtext;
+                sbtn.disabled = false;
+            }
         });
 
     </script>
