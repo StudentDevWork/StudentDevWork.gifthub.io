@@ -205,6 +205,7 @@
             text-align: center;
             font-size: 20px;
             margin-bottom: 6px;
+            font-family: monospace;
         }
 
         .cap-heading {
@@ -905,6 +906,18 @@
         }
 
         @media (max-width: 768px) {
+            .heading {
+                font-size: 20px;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .about {
+                font-size: 25px;
+            }
+
             .right-side {
                 width: 600px;
                 text-align: center;
@@ -944,7 +957,8 @@
             }
 
             .serve1 {
-                width: 100%;
+                width: 70%;
+                margin-left: 60px;
             }
 
             .serve-bg {
@@ -967,6 +981,7 @@
             }
 
             .about-dis {
+                width: 100%;
                 flex-direction: column;
                 margin-top: auto;
             }
@@ -974,6 +989,14 @@
             .about-glass {
                 width: 600px;
                 margin-left: 0;
+            }
+
+            .P-title {
+                font-size: 30px;
+            }
+
+            .promotion {
+                font-size: 25px;
             }
 
             .cap {
@@ -984,8 +1007,25 @@
                 text-align: center;
             }
 
+            .cap-title {
+                font-size: 30px;
+            }
+
             .cap--box-grid {
                 width: 600px;
+                margin-left: 30px;
+            }
+
+            .capablity-iconbox {
+                font-size: 25px;
+            }
+
+            .glassy-title {
+                font-size: 20px;
+            }
+
+            .glassy-script {
+                font-size: 18px;
             }
 
             .project-background {
@@ -999,10 +1039,124 @@
                 gap: 20px;
             }
 
+            .project-title {
+                font-size: 30px;
+            }
+
+            .project-heading {
+                font-size: 30px;
+            }
+
+            .project-dis {
+                font-size: 25px;
+            }
+
             .card-box {
                 width: 100%;
                 margin-top: 10px;
             }
+
+            .card1,
+            .card3,
+            .card5 {
+                height: 140px;
+            }
+
+            .card2,
+            .card4,
+            .card6 {
+                height: 350px;
+            }
+
+            .card-head {
+                font-size: 25px;
+            }
+
+            .card-glass {
+                font-size: 25px;
+            }
+
+            .card-tit {
+                font-size: 30px;
+            }
+
+            .card-dis {
+                font-size: 25px;
+            }
+
+            .card2-glass {
+                font-size: 25px;
+                margin-top: 25px;
+            }
+
+            .card-btn {
+                font-size: 25px;
+                margin-top: 25px;
+                padding: 30px;
+            }
+
+            .glassy {
+                width: 50%;
+            }
+
+            .serve1 {
+                width: 80%;
+                margin-left: 50px;
+            }
+
+            .sr-tit,
+            .msg-tit {
+                font-size: 30px;
+            }
+
+            .serve-head {
+                margin-bottom: auto;
+            }
+
+            .serve-dis,
+            .submit,
+            .msg {
+                font-size: 25px;
+            }
+
+            .serve1-tit {
+                font-size: 30px;
+            }
+
+            .glass,
+            .serve-dif {
+                font-size: 30px;
+            }
+
+            .serve-clr,
+            .hire-title {
+                font-size: 25px;
+            }
+
+            .hire-dis {
+                font-size: 25px;
+                margin-top: auto;
+            }
+
+            .hire-link-box {
+                font-size: 20px;
+            }
+
+            .form-label {
+                font-size: 25px;
+            }
+
+            input [type=text],
+            textarea,
+            input[type=email],
+            select {
+                padding: 20px 25px;
+            }
+
+            .bottom-link {
+                font-size: 18px;
+            }
+
         }
     </style>
 </head>
@@ -1030,13 +1184,11 @@
 
     <div class="home-color" id="about">
         <p class="heading"> Available for Part-time & Micro Freelance Projects</p>
-        <h1 class="title">
-            Hi i,m a <span class="gradient"> Front End Web Developer & </span>
+        <h1 class="title">Hi i,m a <span class="gradient"> Front End Web Developer & </span>
             Technical Writer.
         </h1>
         <p class="about">I craft clean, semantic, and mobile-first web pages that load quickly and look professional. As
-            a
-            student developer, I help creators and small businesses build landing pages, fix responsive layout bugs, and
+            a student developer, I help creators and small businesses build landing pages, fix responsive layout bugs, and
             produce structured technical guides</p>
     </div>
 
@@ -1062,7 +1214,7 @@
     <div class="cap" id="Skills">
         <span class="cap-title">CAPABILITY</span>
         <p class="cap-heading">My Core Skills & Tech Stack </p>
-        <p class="promotion" style="text-align: center; font-size: 20px;">Tools & Fundamentals i use daily to build
+        <p class="promotion" style="text-align: center">Tools & Fundamentals i use daily to build
             clean digital experiences</p>
         <div>
             <div class="cap--box-grid">
@@ -1162,7 +1314,7 @@
                 </div>
                 <div class="card4">
                     <span class="card-dis">Step-by-step beginner guide breaking down justify-content, align-items, and
-                        auto-margins with clear visual diagrams and reproducible code snippets.</span>
+                        auto-margins with clear visual diagrams and reproducible code</span>
                     <div class="card2-glass-grid">
                         <div class="card2-glass">Tutorial</div>
                         <div class="card2-glass">Documentation</div>
@@ -1301,9 +1453,8 @@
         <div class="hire" id="discuss">
             <div class="hire-me-left">
                 <p class="hire-title">Start A Conversation</p>
-                <p class="hire-heading">Have a project in mind? <br> Let's get it done.
-                </p>
-                <p>Whether you need a quick landing page, bug troubleshooting on mobile, or clean technical
+                <p class="hire-heading">Have a project in mind? <br> Let's get it done.</p>
+                <p class="hire-dis">Whether you need a quick landing page, bug troubleshooting on mobile, or clean technical
                     articles, I am ready to help. Send a message, and I will reply within 24 hours.</p>
                 <p class="hire-link-box">® &nbsp; &nbsp; &nbsp; Available daily: 1–2 hours (Evening / IST timezone)
                 </p>
@@ -1313,13 +1464,13 @@
                 <input type="hidden" name="access_key" value="cf1b5dfe-a3b6-498a-bc7e-d9c7eeca3edf">
                 <input type="hidden" name="subject" value="New freelance project from Portfolio">
 
-                <label for="name">YOUR NAME</label>
+                <label for="name" class="form-label">YOUR NAME</label>
                 <input type="text" id="name" name="name" placeholder="eg:- Willem Douglas" required>
 
-                <label for="email">YOUR EMAIL</label>
+                <label for="email" class="form-label">YOUR EMAIL</label>
                 <input type="email" id="email" name="email" placeholder="eg:- student@gmail.com" required>
 
-                <label for="service">SERVICE NEEDED</label>
+                <label for="service" class="form-label">SERVICE NEEDED</label>
                 <select id="service" name="service" required>
                     <option value="">Select One</option>
                     <option value="Responsive Page">1-Page Responsive Landing Page</option>
@@ -1328,7 +1479,7 @@
                     <option value="Other">Other Project</option>
                 </select>
 
-                <label for="details">PROJECT DETAILS</label>
+                <label for="details" class="form-label">PROJECT DETAILS</label>
                 <textarea id="details" name="details" rows="2" cols="15" minlength="20" placeholder="Briefly describe what you need done...." required></textarea>
 
                 <button class="submit" type="submit">Send Message 📨</button>
@@ -1342,10 +1493,10 @@
         <div class="bottom">
             <div class="left-side">
                 <p class="logo">&lt;&gt;</p>
-                <p> Built with Semantic HTML & Tailwind CSS. Hosted on GitHub Pages</p>
+                <p class="bottom-link"> Built with Semantic HTML & Tailwind CSS. Hosted on GitHub Pages</p>
             </div>
             <div class="right-side">
-                <p>©️ 2026 Student Front-End Developer. All rights reserved.</p>
+                <p class="bottom-link">©️ 2026 Student Front-End Developer. All rights reserved.</p>
             </div>
         </div>
     </div>
